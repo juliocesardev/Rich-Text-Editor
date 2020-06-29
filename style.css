@@ -1,0 +1,140 @@
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Hind', sans-serif;
+}
+
+html, body {
+    background-color: #EEEEEE;
+    margin: 30px 10px;
+}
+
+/***********************************************************************************************************/
+/* EDITOR */
+.editor-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 910px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.editor-container .editor-tools {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.editor-container .editor-tools .tools {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.editor-container .editor-tools .tools .tool-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.editor-container .editor-tools .tools .tool-item:last-child {
+    margin-right: 0;
+}
+
+.editor-container .editor-tools .tools .tool-item .button-item {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #444444;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+}
+
+.editor-container .editor-tools .tools .tool-item .button-item:hover,
+.editor-container .editor-tools .tools .tool-item .button-item.active {
+    background-color: #EAEAEA;
+}
+
+.editor-container .editor-tools .tools .tool-item .select-item {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #444444;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    font-weight: 500;
+}
+
+.editor-container .editor-tools .tools .tool-item .select-item:hover {
+    background-color: #EAEAEA;
+}
+
+.editor-container .editor-text {
+    min-height: 100px;
+    padding: 10px;
+    background-color: #EEEEEE;
+    border-radius: 4px;
+    outline: none;
+}
+
+.editor-container .editor-text img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.editor-container .editor-text ol {
+    list-style: decimal-leading-zero inside;
+}
+
+.editor-container .editor-text ul {
+    list-style: disc inside;
+}
+
+/***********************************************************************************************************/
+/* TOOLTIP */
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    font-size: 12px;
+    font-weight: 500;
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
